@@ -1,0 +1,21 @@
+{%extends 'new/base.html'%}
+
+
+{% block title %}Зарубежная литература{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Зарубежная литература</h1>
+
+        {% for il in books %}
+            <div  class="alert alert-waning" >
+                <h3>{{il.title}}</h3>
+                <h5>{{il.author}}</h5>
+                <img  class="photo" src="{{ il.image }}" width="400" height="500" align="left">
+                <p>{{il.briefly}}</p>
+                <a href="{% url 'dinam' il.id%}" class="btn btn-warning">Смотреть</a>
+            </div>
+        {%endfor%}
+
+    </div>
+{% endblock %}

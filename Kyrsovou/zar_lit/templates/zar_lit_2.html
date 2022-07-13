@@ -1,0 +1,14 @@
+
+{%extends 'new/base.html'%}
+{% block title %}{{zar_lists.title}}{% endblock %}
+{% block shapka %}
+
+<div class="features">
+    <h1>Зарубежная литература</h1>
+    <h1>{{zar_lists.title}}</h1>
+    <p>{{zar_lists.briefly}}</p>
+    <p>{{zar_lists.data}}</p>
+    <a href="{{zar_lists.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+    <a href="{% url 'zar_lit'%}" ><span  class="btn btn-warning ">Назад</span></a><br><br>
+<div/>
+{% endblock %}

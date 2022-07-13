@@ -1,0 +1,21 @@
+
+{%extends 'new/base.html'%}
+{% block title %}Приключения{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Приключения</h1>
+
+        {% for ili in book %}
+
+            <div  class="alert alert-waning">
+                <h3>{{ili.title}}</h3>
+                <p>{{ili.author}}</p>
+                <p>{{ili.briefly}}</p>
+                <a href="{% url 'dinam_adv' ili.id%}" class="btn btn-warning">Смотреть</a>
+            </div>
+        {%endfor%}
+
+
+    </div>
+{% endblock %}

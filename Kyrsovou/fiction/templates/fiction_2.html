@@ -1,0 +1,16 @@
+
+{%extends 'new/base.html'%}
+{% block title %}{{fict.title}}{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Фантастика</h1>
+        <h1>{{fict.title}}</h1>
+        <p>{{fict.briefly}}</p>
+        <p>{{fict.data}}</p>
+        <a href="{{fict.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+        <a href="{% url 'fiction'%}"><span  class="btn btn-warning ">Назад</span></a><br><br>
+
+
+    </div>
+{% endblock %}

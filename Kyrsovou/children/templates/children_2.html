@@ -1,0 +1,17 @@
+
+{%extends 'new/base.html'%}
+{% block title %}{{det.title}}{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Детская литература</h1>
+        <h1>{{det.title}}</h1>
+        <p>{{det.briefly}}</p>
+        <p>{{det.data}}</p>
+        <a href="{{det.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+        <a href="{% url 'child'%}"><span  class="btn btn-warning ">Назад</span></a><br><br>
+
+
+
+    </div>
+{% endblock %}

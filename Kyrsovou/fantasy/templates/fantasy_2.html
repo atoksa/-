@@ -1,0 +1,16 @@
+{%extends 'new/base.html'%}
+{% block title %}{{fant.title}}{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Фэнтази</h1>
+        <h1>{{fant.title}}</h1>
+        <p>{{fant.briefly}}</p>
+        <p>{{fant.data}}</p>
+        <a href="{{fant.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+        <a href="{% url 'fantasy'%}"><span  class="btn btn-warning ">Назад</span></a><br><br>
+
+
+
+    </div>
+{% endblock %}

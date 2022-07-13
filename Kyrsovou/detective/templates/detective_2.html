@@ -1,0 +1,15 @@
+{%extends 'new/base.html'%}
+{% block title %}{{detec.title}}{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Детектив</h1>
+        <h1>{{detec.title}}</h1>
+        <p>{{detec.briefly}}</p>
+        <p>{{detec.data}}</p>
+       <a href="{{zar_lists.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+        <a href="{% url 'detective'%}"><span  class="btn btn-warning ">Назад</span></a><br><br>
+
+
+    </div>
+{% endblock %}

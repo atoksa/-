@@ -1,0 +1,17 @@
+
+{%extends 'new/base.html'%}
+{% block title %}{{adv.title}}{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Приключения</h1>
+        <h1>{{adv.title}}</h1>
+        <p>{{adv.briefly}}</p>
+        <p>{{adv.data}}</p>
+        <a href="{{adv.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+        <a href="{% url 'adventure'%}"><span  class="btn btn-warning ">Назад</span></a><br><br>
+
+
+
+    </div>
+{% endblock %}

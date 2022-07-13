@@ -1,0 +1,18 @@
+
+{%extends 'new/base.html'%}
+{% block title %}{{clas.title}}{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Классика</h1>
+        <h1>{{clas.title}}</h1>
+        <img src="{clas.image}">
+        <p>{{clas.briefly}}</p>
+        <p>{{clas.data}}</p>
+        <a href="{{clas.book}}" class="btn btn-warning" download="">Скачать</a><br><br>
+        <a href="{% url 'classic'%}"><span  class="btn btn-warning ">Назад</span></a><br><br>
+
+
+
+    </div>
+{% endblock %}

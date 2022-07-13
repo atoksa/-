@@ -1,0 +1,21 @@
+
+{%extends 'new/base.html'%}
+{% block title %}Классика{% endblock %}
+{% block shapka %}
+
+    <div class="features">
+        <h1>Классика</h1>
+
+        {% for il in books %}
+
+            <div  class="alert alert-waning">
+                <h3>{{il.title}}</h3>
+                <p>{{il.author}}</p>
+                <p>{{il.briefly}}</p>
+                <a href="{% url 'dinam_clas' il.id%}" class="btn btn-warning">Смотреть</a>
+            </div>
+        {%endfor%}
+
+
+    </div>
+{% endblock %}
